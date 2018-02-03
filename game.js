@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 /** @type {Canvas} */
 var canvas = null;
@@ -36,18 +36,21 @@ function init() {
 function update() {
 	// Update the state of the birds
 	for (let bird of birds) {
-		bird.update({x: 200, y: 200});
+		bird.update({x: 200, y: 200}, canvas.width, canvas.height);
 		for (let other_bird of birds) {
 			if (bird === other_bird) continue;
 
 			if (distanceTo(bird.position, other_bird.position) < 2*BIRD_SIZE) {
-				bird.collision();
+				//bird.collision();
 			}
 		}
 	}
 }
 
 function draw() {
+	// Clear the screen
+	c.clearRect(0,0,canvas.width,canvas.height);
+
 	// Draw the state of the world
 	
 	// Draw all the birds

@@ -1,4 +1,6 @@
 "use strict"
+const FRICTION = 0.995;
+
 const PIGEON_COUNT = 10;
 const BIRD_SIZE = 10;
 
@@ -8,4 +10,5 @@ const BIRD_BRAIN_HIDDEN_HEIGHT = 4;
 const BIRD_BRAIN_OUTPUT_LEN = 4;
 
 const BIRD_SPEED = 2;
+const BIRD_MAX_SPEED = 5;
 
